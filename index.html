@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Parisienne&display=swap" rel="stylesheet">
+
+    <style>
+        body{
+            background-color: rgb(214, 173, 253);
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+            overflow: hidden;
+        }
+        section{
+            text-align: center;
+            background-color: rgb(138, 61, 209);
+            font-size: 30px;
+            padding: 20px;
+            border-radius:50px;
+            color: aliceblue;
+            font-family: "Parisienne", cursive;
+            font-weight: 400;
+            font-style: normal;
+        }
+        button{
+            background-color: rgb(146, 76, 211);
+            border-radius: 20px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 23px;
+            color: aliceblue;
+             font-family: "Parisienne", cursive;
+             font-weight: 2000;
+             font-style: normal;
+        }
+        button:hover{
+            background-color: rgb(205, 155, 252);
+        }
+        p{
+            font-size: 60px;
+            margin: 15px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: aliceblue;
+        }
+        span{
+            font-size: 60px;
+            margin: 15px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;     
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <span></span>
+        <h1>Contador</h1>
+        <p>0</p>
+        <button onclick="aumentar()">Mais</button>
+        <button onclick="zerar()">Zerar</button>
+         <button onclick="diminuir()">Menos</button>
+    </section>
+    <script>
+        let num = 0
+        function aumentar(){
+            num = num +1
+            render()
+        }
+           function zerar(){
+            num = num - num
+            render()
+        }
+           function diminuir(){
+            num = num -1
+            render()
+        }
+        function render(){
+            const p = document.querySelector("p")
+            p.innerText = num
+         
+              const span = document.querySelector("span")
+            span.innerText = num
+        }
+        render()
+    </script>
+</body>
+</html>
